@@ -10,9 +10,9 @@ async function leerJSON(url) {
   }
 }
 
-function cargarNoticias()
+function cargarNoticia()
 {
-	var url="https://carlosreneas.github.io/endpoints/noticias.json";
+	var url="https://carlosreneas.github.io/endpoints/noticia_1.json";
 	var url1="https://carlosreneas.github.io/endpoints/categoria_deporte.json";
 	var url2="https://carlosreneas.github.io/endpoints/categoria_tecnologia.json";
 
@@ -35,15 +35,17 @@ function cargarNoticias()
 function mostrarNoticia(datos)
 {
 	var title="";
+	var img="";
 	var texto="";
-	for(let i=0;i<datos.length;i++)
-	{
-		title="<a href='html/noticia1.html'>"+datos[i].titulo+"-"+datos[i].categoria+"-"+datos[i].fecha+"</a>";
-		texto="<p>"+datos[i].descripcion+"</p>";
+	
+		title="<a href='#''>"+datos[0].titulo+"-"+datos[0].categoria+"-"+datos[0].fecha+"</a>";
+		img="<img src='"+datos[0].img+"' alt=''>";
+		texto="<di>"+datos[0].detalle+"</di>";
+	
 
-		document.getElementById("noticia"+i).innerHTML=title+texto;
-
-	}
+	document.getElementById("title").innerHTML=title;
+	document.getElementById("imagen").innerHTML=img;
+	document.getElementById("texto").innerHTML=texto;
 
 }
 
