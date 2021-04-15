@@ -34,3 +34,18 @@ function mostrarNoticia(datos)
 	}
 
 }
+
+function mostrarDeportes(datos)
+{
+	var div="";
+
+	for(let i=0;i<datos.length;i++)
+	{
+		div+="<div id='rta"+i+"'> </div>";
+	}
+
+	for(let i=0;i<datos.length;i++)
+	{
+		title="<p>"++"</p>"
+	}
+}
